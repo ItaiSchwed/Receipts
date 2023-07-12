@@ -71,7 +71,7 @@ class Receipts:
                 id, name, date, amount, file_path = self.extract_data(receipt_url)
                 mail_address = self.get_mail_address(name)
                 if id not in self.payments.id.values:
-                    # self.send_mail(mail_address, id, date, amount, file_path)
+                    self.send_mail(mail_address, id, date, amount, file_path)
                     self.save_to_drive(receipts_folder_id, self.get_name(name), file_path, id, date)
                     self.payments = pd.concat([self.payments,
                                                pd.DataFrame({'id': [id], 'name': [name],
