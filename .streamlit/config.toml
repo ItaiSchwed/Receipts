@@ -1,4 +1,2 @@
 [theme]
 base = "dark"
-[session_server]
-listen_address = "8097:8097"
