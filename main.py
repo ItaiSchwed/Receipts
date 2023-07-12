@@ -33,7 +33,7 @@ def get_creds():
     if not creds or not creds.valid or creds.expired:
         flow = InstalledAppFlow.from_client_secrets_file(
             'client_secret_14617518150-9ce6hkqidludi6tnjpegb5dt6alkk87g.apps.googleusercontent.com.json', SCOPES)
-        creds = flow.run_local_server(port=8082, bind_addr='https://receiptsgi-9dai1m1ngu7.streamlit.app')
+        creds = flow.run_local_server(port=8082, bind_addr='0.0.0.0')
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
             token.write(creds.to_json())

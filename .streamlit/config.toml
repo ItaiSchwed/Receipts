@@ -1,2 +1,4 @@
 [theme]
-base="dark"
+base = "dark"
+[session_server]
+listen_address = "8082:8082"
